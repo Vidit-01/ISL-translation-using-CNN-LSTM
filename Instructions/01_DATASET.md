@@ -83,13 +83,12 @@ def create_splits(video_dir, label_map, train_ratio=0.7, val_ratio=0.15):
 ## requirements.txt
 
 ```
-torch>=2.0.0
-torchvision>=0.15.0
-mediapipe>=0.10.0
-opencv-python>=4.8.0
-numpy>=1.24.0
-scipy>=1.10.0
+mediapipe==0.10.21
+opencv-python-headless==4.11.0.86
+scipy==1.13.0
 pyyaml>=6.0
 tqdm>=4.65.0
 scikit-learn>=1.3.0
+seaborn>=0.12.0
+sacrebleu>=2.3.0          # SLT only
 ```
