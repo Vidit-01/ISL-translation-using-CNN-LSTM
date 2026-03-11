@@ -5,7 +5,7 @@ nhead: 8
 num_encoder_layers: 6
 dim_feedforward: 512
 dropout: 0.1
-num_classes: 263
+num_classes: 80
 
 train:
   epochs: 150

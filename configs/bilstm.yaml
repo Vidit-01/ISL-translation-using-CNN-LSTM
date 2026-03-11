@@ -3,7 +3,7 @@ input_dim: 543
 hidden: 256
 num_layers: 2
 dropout: 0.3
-num_classes: 263
+num_classes: 80
 
 train:
   epochs: 80

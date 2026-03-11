@@ -1,31 +1,23 @@
 # Dataset
 
-## Primary Dataset: INCLUDE (IIT Bombay)
+## Primary recommended Dataset: ISL Words with Landmarks (Kaggle)
 
-### Access
+This is a processed version of the INCLUDE dataset, containing 80 classes of common ISL words. It is pre-processed for ViViT and includes MediaPipe landmarks.
+
+- **URL:** [Kaggle: Indian Sign Language words with Landmarks](https://www.kaggle.com/datasets/kaushikyh/indian-sign-language-words-with-landmarks)
+- **Method:** Download via Kaggle CLI or direct download.
+- **Structure:** `ProcessedData_vivit/{word}/{video}.mp4`
+- **Features:** 32 frames per video, 224x224 RGB, includes hand and pose landmarks.
+
+## Alternative Dataset: INCLUDE (IIT Bombay)
+
+The full original dataset.
+
 - **URL:** https://iitbacin.github.io/INCLUDE-dataset/
-- **Method:** Fill request form, access granted via Google Drive link (usually within 2-3 days)
-- **Size:** ~4500 videos, 263 word classes, multiple signers, RGB MP4
+- **Method:** Fill request form, access via Drive link (~2-3 days).
+- **Size:** ~4500 videos, 263 classes.
 
-### Structure After Download
-```
-INCLUDE/
-├── Videos/
-│   ├── Afternoon/
-│   │   ├── signer1_afternoon_1.mp4
-│   │   ├── signer1_afternoon_2.mp4
-│   │   └── ...
-│   ├── Again/
-│   └── ... (263 class folders)
-└── Labels.csv   # video_name, label columns
-```
-
-### Statistics
-- ~17 videos per class on average (very low — augmentation is mandatory)
-- Multiple signers (signer variation helps generalization)
-- Variable video length: 1–5 seconds at 30fps
-
-## Fallback Dataset: WLASL (If INCLUDE Access Is Delayed)
+## Fallback Dataset: WLASL
 
 WLASL is publicly available and has an identical pipeline. Use it to build and validate the full pipeline while waiting for INCLUDE.
 
